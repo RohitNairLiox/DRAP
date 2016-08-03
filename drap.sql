@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 26, 2016 at 02:29 AM
+-- Generation Time: Aug 03, 2016 at 05:08 AM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.21
 
@@ -33,21 +33,32 @@ CREATE TABLE `client_info` (
   `Address` text NOT NULL,
   `Client_type` text NOT NULL,
   `Referred_by` text NOT NULL,
-  `Contact` text NOT NULL,
-  `Email` text NOT NULL
+  `ResContact` text NOT NULL,
+  `OffcContact` text NOT NULL,
+  `MobContact` text NOT NULL,
+  `AltContact` text NOT NULL,
+  `Email` text NOT NULL,
+  `PAN_No` text NOT NULL,
+  `ST_No` text NOT NULL,
+  `VAT_No` text NOT NULL,
+  `CST_No` text NOT NULL,
+  `PTRC_No` text NOT NULL,
+  `PTEC_No` text NOT NULL,
+  `TAN_No` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `client_info`
 --
 
-INSERT INTO `client_info` (`Uid`, `Client_ID`, `Client_name`, `Address`, `Client_type`, `Referred_by`, `Contact`, `Email`) VALUES
-(1, 'RN0001', 'Rohit Nair', 'shiv sagar', 'good', 'sarath', '8149712865', 'puthenrohit@gmail.com'),
-(2, 'SC0001', 'Sarath Chandran', 'asddafdadfasdsadsadsadsadsaxxacxsvWD', 'Hindu Undivided Family', 'Rohit Nair', '8149712865', 'puthenrohit@gmaiol.com'),
-(3, 'SC0002', 'Sarathchandran', '108/C, Shivsagar Apt, Suyog nagar, Stella, Vasai(W) - 401202', 'type 1', 'Rohit Nair', '9969520439', 'sarathvalia@gmail.com'),
-(4, 'SM0001', 'Sasa More', 'adasdsadsadasdadad', 'Co-operative Credit Societies', 'Rohit Nair', '9969520439', 'asdasdd@asda.ai'),
-(5, 'SS0001', 'Sobha Sarath', '108/C, Shivsagar Apt, Suyog Nagar, Stella, Vasai(W)', 'Hindu Undivided Family', 'Rohit Nair', '819712865', 'puthensobha@gmail.com'),
-(7, 'VF001', 'Vanessa', 'Shiv samarth Apt, Stella, Vasai(E)', 'Hindu Undivided Family', 'Rohit Nair', '9969520439', 'van@aa.in');
+INSERT INTO `client_info` (`Uid`, `Client_ID`, `Client_name`, `Address`, `Client_type`, `Referred_by`, `ResContact`, `OffcContact`, `MobContact`, `AltContact`, `Email`, `PAN_No`, `ST_No`, `VAT_No`, `CST_No`, `PTRC_No`, `PTEC_No`, `TAN_No`) VALUES
+(1, 'RN0001', 'Rohit Nair', 'shiv sagar', 'good', 'sarath', '8149712865', '', '', '', 'puthenrohit@gmail.com', '', '', '', '', '', '', ''),
+(2, 'SC0001', 'Sarath Chandran', 'asddafdadfasdsadsadsadsadsaxxacxsvWD', 'Hindu Undivided Family', 'Rohit Nair', '8149712865', '', '', '', 'puthenrohit@gmaiol.com', '', '', '', '', '', '', ''),
+(3, 'SC0002', 'Sarathchandran', '108/C, Shivsagar Apt, Suyog nagar, Stella, Vasai(W) - 401202', 'type 1', 'Rohit Nair', '9969520439', '', '', '', 'sarathvalia@gmail.com', '', '', '', '', '', '', ''),
+(4, 'SM0001', 'Sasa More', 'adasdsadsadasdadad', 'Co-operative Credit Societies', 'Rohit Nair', '9969520439', '', '', '', 'asdasdd@asda.ai', '', '', '', '', '', '', ''),
+(5, 'SS0001', 'Sobha Sarath', '108/C, Shivsagar Apt, Suyog Nagar, Stella, Vasai(W)', 'Hindu Undivided Family', 'Rohit Nair', '819712865', '', '', '', 'puthensobha@gmail.com', '', '', '', '', '', '', ''),
+(7, 'VF001', 'Vanessa', 'Shiv samarth Apt, Stella, Vasai(E)', 'Hindu Undivided Family', 'Rohit Nair', '9969520439', '', '', '', 'van@aa.in', '', '', '', '', '', '', ''),
+(8, 'RO0001', 'Rohjad', 'Vitalwadi, Charni Rd, Mumbai, Delhi, Agra', 'Hindu Undivided Family', 'Sarath', '3242343243', '3243465463', '3425345324', '1111111111', 'pu@in.in', '3432423', '115255', '6767', '3345654', '353654', '78765', '22445');
 
 -- --------------------------------------------------------
 
@@ -139,7 +150,9 @@ CREATE TABLE `user_info` (
 INSERT INTO `user_info` (`Uid`, `Name`, `Username`, `Password`, `Role`) VALUES
 (1, 'Rohit Nair', 'Rohit@drap.app', 'Love2play', 'Admin'),
 (2, 'Ravi Sir', 'Ravi@drap.app', 'love2work', 'DataOperator'),
-(3, 'Amit Gaud', 'Amit@drap.app', 'Rohit123s', 'DataOperator');
+(3, 'Amit Gaud', 'Amit@drap.app', 'Rohit123s', 'DataOperator'),
+(4, 'Nilesh', 'Nilesh@drap.app', 'love2play', 'DataOperator'),
+(5, 'Ramesh Vaidya', 'RameshV@drap.app', 'Love2work', 'DataOperator');
 
 -- --------------------------------------------------------
 
@@ -160,8 +173,8 @@ CREATE TABLE `user_session` (
 --
 
 INSERT INTO `user_session` (`session_id`, `ip_address`, `user_agent`, `last_activity`, `user_data`) VALUES
-('c95b07342b3a298bad7bf827b2226a3e', '::1', 'Mozilla/5.0 (Windows NT 6.1; rv:47.0) Gecko/20100101 Firefox/47.0', '1469362640', 'a:4:{s:9:"user_data";a:2:{i:0;s:13:"Amit@drap.app";i:1;s:9:"Rohit123s";}s:9:"user_name";s:9:"Amit Gaud";s:9:"user_role";s:12:"DataOperator";s:8:"userName";s:13:"Amit@drap.app";}'),
-('8e7380a1f30e10af45efc315bf4a0292', '::1', 'Mozilla/5.0 (Windows NT 6.1; rv:47.0) Gecko/20100101 Firefox/47.0', '1469448749', '');
+('52e519c785144f9c7005aa9e93a3e204', '::1', 'Mozilla/5.0 (Windows NT 6.1; rv:47.0) Gecko/20100101 Firefox/47.0', '1470147732', 'a:4:{s:9:"user_data";a:2:{i:0;s:14:"Rohit@drap.app";i:1;s:9:"Love2play";}s:9:"user_name";s:10:"Rohit Nair";s:9:"user_role";s:5:"Admin";s:8:"userName";s:14:"Rohit@drap.app";}'),
+('505d216371b9c4477ec02e7243737965', '::1', 'Mozilla/5.0 (Windows NT 6.1; rv:47.0) Gecko/20100101 Firefox/47.0', '1470154849', 'a:4:{s:9:"user_data";a:2:{i:0;s:14:"Rohit@drap.app";i:1;s:9:"Love2play";}s:9:"user_name";s:10:"Rohit Nair";s:9:"user_role";s:5:"Admin";s:8:"userName";s:14:"Rohit@drap.app";}');
 
 --
 -- Indexes for dumped tables
@@ -199,7 +212,7 @@ ALTER TABLE `user_info`
 -- AUTO_INCREMENT for table `client_info`
 --
 ALTER TABLE `client_info`
-  MODIFY `Uid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `Uid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT for table `daily_report`
 --
@@ -214,7 +227,7 @@ ALTER TABLE `new_task`
 -- AUTO_INCREMENT for table `user_info`
 --
 ALTER TABLE `user_info`
-  MODIFY `Uid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `Uid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
