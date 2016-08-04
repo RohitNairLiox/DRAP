@@ -38,4 +38,4 @@ Thanks to blivesta http://git.blivesta.com/rippler
 
 #List.js
 
-Thanks to Jonny http://www.listjs.com/
+Thanks to Jonny for the awesome lib http://www.listjs.com/
