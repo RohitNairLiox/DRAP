@@ -10,8 +10,9 @@ A elegant solution to delegate task and monitoring day-to-day activities in the 
 4.  Add NEW Task, Client and Employee.
 5.  Employees can accept and/or complete new tasks.
 6.  A view to display all on-going tasks and Completed Task (PerUser and at organizational level)
-7.  A Daily Report form to list out all the work done by an employee in the given day along with the status of the task.
+7.  A Daily Report form to list out all the work done by an employee in the given day along with the status of the task
 8.  Setting page (currently allowing user to change their passwords)
+9.  Notification (A simple per day reminder)
 
 #CodeIgniter 2
 Open Source PHP Framework (originally from EllisLab)
