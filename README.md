@@ -33,4 +33,8 @@ Thanks to Daniel Eden for his contributions https://daneden.github.io/animate.cs
 
 #Rippler.js
 
-Thanks to blivesta http://git.blivesta.com/rippler/
+Thanks to blivesta http://git.blivesta.com/rippler
+
+#List.js
+
+Thanks to Jonny http://www.listjs.com/
